@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>JABA 美食型錄 2025</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      color: #333;
+      line-height: 1.6;
+      width: 210mm;
+      margin: 0 auto;
+      background: #e6bb86;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #B22222, #8B0000);
+      color: white;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: #FFD700;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .container {
+      padding: 20px 40px;
+    }
+
+    .category-title {
+      color: #B22222;
+      font-size: 24px;
+      margin: 30px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #FFD700;
+      page-break-after: avoid;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      page-break-inside: avoid;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .product-info {
+      padding: 20px;
+    }
+
+    .product-title {
+      font-size: 18px;
+      color: #B22222;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .product-specs {
+      list-style: none;
+      margin-bottom: 15px;
+    }
+
+    .product-specs li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .spec-label {
+      color: #666;
+      font-weight: bold;
+    }
+
+    .temperature {
+      display: inline-block;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .temp-frozen {
+      background-color: #E3F2FD;
+      color: #1976D2;
+    }
+
+    .temp-room {
+      background-color: #FFF3E0;
+      color: #F57C00;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #B22222;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .description {
+      color: #666;
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 12px;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+
+    @media print {
+      body {
+        width: 100%;
+      }
+
+      .product-card {
+        break-inside: avoid;
+      }
+
+      .category-title {
+        break-before: page;
+      }
+
+      .header {
+        break-after: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h1>JABA 美食型錄</h1>
+    <p>2025年產品目錄</p>
+  </header>
+  
+  <div class="container">
+    <h2 class="category-title">經典美饌</h2>
+    <div class="product-grid">
+      <!-- 月亮蝦餅 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/zB7V7jY.jpeg" alt="月亮蝦餅" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">月亮蝦餅</h3>
+          <ul class="product-specs">
+            <li>
+              <span class="spec-label">商品規格</span>
+              <span class="spec-value">110g×5片/盒×24盒</span>
+            </li>
+            <li>
+              <span class="spec-label">保存期限</span>
+              <span class="spec-value">12個月</span>
+            </li>
+            <li>
+              <span class="spec-label">保存方式</span>
+              <span class="temperature temp-frozen">冷凍-18°C以下</span>
+            </li>
+          </ul>
+          <div class="description">
+            外皮金黃酥脆，內餡彈牙多汁，搭配特製醬料，香氣四溢
+          </div>
+          <div class="price">建議售價：NT$5,232/箱</div>
+        </div>
+      </div>
+
+      <!-- 酸白菜臭豆腐鍋 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/jSpteda.jpeg" alt="酸白菜臭豆腐鍋" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">酸白菜臭豆腐鍋</h3>
+          <ul class="product-specs">
+            <li>
+              <span class="spec-label">商品規格</span>
+              <span class="spec-value">800g/盒×18盒</span>
+            </li>
+            <li>
+              <span class="spec-label">保存期限</span>
+              <span class="spec-value">18個月</span>
+            </li>
+            <li>
+              <span class="spec-label">保存方式</span>
+              <span class="temperature temp-room">常溫保存</span>
+            </li>
+          </ul>
+          <div class="description">
+            精選酸白菜與特製臭豆腐，湯頭濃郁，口感層次豐富
+          </div>
+          <div class="price">建議售價：NT$2,610/箱</div>
+        </div>
+      </div>
+
+      <!-- 麻油猴頭菇（冷凍版） -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/PWlIT2K.png" alt="麻油猴頭菇" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">麻油猴頭菇（冷凍版）</h3>
+          <ul class="product-specs">
+            <li>
+              <span class="spec-label">商品規格</span>
+              <span class="spec-value">500g/包×30包</span>
+            </li>
+            <li>
+              <span class="spec-label">保存期限</span>
+              <span class="spec-value">12個月</span>
+            </li>
+            <li>
+              <span class="spec-label">保存方式</span>
+              <span class="temperature temp-frozen">冷凍-18°C以下</span>
+            </li>
+          </ul>
+          <div class="description">
+            融合猴頭菇的獨特口感與麻油的濃郁香氣，深受喜愛，既健康又美味
+          </div>
+          <div class="price">建議售價：NT$5,490/箱</div>
+        </div>
+      </div>
+
+      <!-- 麻油猴頭菇（常溫版） -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/PWlIT2K.png" alt="麻油猴頭菇" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">麻油猴頭菇（常溫版）</h3>
+          <ul class="product-specs">
+            <li>
+              <span class="spec-label">商品規格</span>
+              <span class="spec-value">500g/包×20包</span>
+            </li>
+            <li>
+              <span class="spec-label">保存期限</span>
+              <span class="spec-value">18個月</span>
+            </li>
+            <li>
+              <span class="spec-label">保存方式</span>
+              <span class="temperature temp-room">常溫保存</span>
+            </li>
+          </ul>
+          <div class="description">
+            融合猴頭菇的獨特口感與麻油的濃郁香氣，深受喜愛，既健康又美味
+          </div>
+          <div class="price">建議售價：NT$3,660/箱</div>
+        </div>
+      </div>
+
+      <!-- 八寶甜湯 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/nB7UDuT.jpeg" alt="八寶甜湯" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">八寶甜湯</h3>
+          <ul class="product-specs">
+            <li>
+              <span class="spec-label">商品規格</span>
+              <span class="spec-value">1000g/包×18包</span>
+            </li>
+            <li>
+              <span class="spec-label">保存期限</span>
+              <span class="spec-value">12個月</span>
+            </li>
+            <li>
+              <span class="spec-label">保存方式</span>
+              <span class="temperature temp-frozen">冷凍-18°C以下</span>
+            </li>
+          </ul>
+          <div class="description">
+            嚴選八種食材，甜而不膩，溫潤養生
+          </div>
+          <div class="price">建議售價：NT$3,330/箱</div>
+        </div>
+      </div>
+
+      <!-- 楊枝甘露 -->
+      <div class="product-card">
+        <img src="https://i.imgur.com/0fyl7Gu.jpeg" alt="楊枝甘露" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">楊枝甘露</h3>
+          <ul class="product-specs">
+            <li>
+              <span class="spec-label">商品規格</span>
+              <span class="spec-value">200g/包×30包</span>
+            </li>
+            <li>
+              <span class="spec-label">保存期限</span>
+              <span class="spec-value">18個月</span>
+            </li>
+            <li>
+              <span class="spec-label">保存方式</span>
+              <span class="temperature temp-frozen">冷凍-18°C以下</span>
+            </li>
+          </ul>
+          <div class="description">
+            香甜芒果與清爽柚子的完美結合，清涼消暑的港式特色甜品
+          </div>
+          <div class="price">建議售價：NT$4,200/箱</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">JABA 品味台灣，食刻相伴</div>
+</body>
+</html>
